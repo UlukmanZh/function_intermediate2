@@ -14,13 +14,12 @@ def print_info(dojo):
     # print (len(list(dojo.keys())[0]))
     # print (len(dojo['locations']))
     
-    for i in range (0, len(dojo), 1):
-        print  (len(dojo[list(dojo.keys())[i]]), list(dojo.keys())[i].upper())
-        for j in range (0, len(dojo[list(dojo.keys())[i]]),1):
-            print  (dojo [list(dojo.keys())[i]][j])
 
+    for key_name in dojo:
+        print (len(dojo[key_name]), (key_name).upper())
+        for cities in dojo[key_name]:
+            print (cities)
             
-
 
 print_info({
     'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
